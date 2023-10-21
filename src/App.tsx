@@ -1,11 +1,17 @@
-import React from 'react';
-import Card from './Components/Card';
+import React, { useState } from 'react';
+import CardDeck from './Components/CardDeck';
 
-const App = () => {
+const App: React.FC = () => {
+  const [cardsDealt, setCardsDealt] = useState(false);
+
+  const handleDealCards = () => {
+    setCardsDealt(true);
+  };
+
   return (
     <div className="App">
-      <h1>Игральная карта:</h1>
-      <Card rank="K" suit="diams" />
+      <button onClick={handleDealCards}>Раздать карты</button>
+      {cardsDealt && <CardDeck />}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import './cards.css';
+import '../cards.css';
 
 interface CardProps {
   rank: string;
