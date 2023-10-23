@@ -10,7 +10,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <button onClick={handleDealCards}>Раздать карты</button>
+      <button className='btn' onClick={handleDealCards}>Раздать карты</button>
       {cardsDealt && <CardDeck />}
     </div>
   );
